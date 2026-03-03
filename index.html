@@ -13,147 +13,77 @@
 </head>
 <body>
 
-    <!-- NAV -->
     <nav class="navegacao">
         <div class="nav-container">
-            <h2 class="logo">Maria.dev</h2>
+            <h2 class="logo">M<span>.</span>dev</h2>
             <ul class="menu">
                 <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contato</a></li>
+                <li><a href="#contatos" class="btn-nav">Contato</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <main id="inicio" class="cabecalho">
-        <div class="hero-container">
-            <img src="maria.png" class="foto-perfil">
-            
-            <h1>Maria Eduarda Martins</h1>
-            <p class="cabecalho-sub-titulo">
-                Desenvolvedora Full Stack focada em criar soluções modernas e eficientes.
-            </p>
-
+    <main id="inicio" class="hero-modern">
+        <div class="hero-content">
+            <div class="foto-wrapper">
+                <img src="maria.png" alt="Maria Eduarda" class="foto-perfil">
+                <div class="foto-glow"></div>
+            </div>
+            <span class="badge">Disponível para novos projetos</span>
+            <h1>Maria Eduarda <span>Martins</span></h1>
+            <p>Transformando ideias em experiências digitais de alto impacto através de código limpo e design intuitivo.</p>
             <div class="botoes">
-                <a href="#projetos" class="btn btn-primario">Ver Projetos</a>
-                <a href="#contatos" class="btn btn-secundario">Contato</a>
+                <a href="#projetos" class="btn-glow">Conhecer Projetos</a>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
         </div>
     </main>
 
-    <!-- SOBRE + EXPERIÊNCIA -->
-    <section class="sobre-experiencia">
-        <div class="container-duplo">
-
-            <div class="card">
-                <h2>Sobre Mim</h2>
-                <p>
-                    Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonada por tecnologia e desenvolvimento web.
-                    Busco me tornar uma Desenvolvedora Full Stack, criando soluções modernas, funcionais e bem estruturadas.
-                </p>
-            </div>
-
-            <div class="card">
-                <h2>Experiência</h2>
-                <h3>Consultora de E-commerce</h3>
-                <ul>
-                    <li>Automação de estoque com integração de APIs</li>
-                    <li>Monitoramento de produtos best sellers</li>
-                    <li>Integração de sistemas e plataformas digitais</li>
-                    <li>Otimização de processos operacionais</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- TECNOLOGIAS -->
-        <div class="card tecnologias">
-            <h2>Tecnologias</h2>
-
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML</span>
+    <section id="sobre" class="sobre-modern">
+        <div class="container">
+            <div class="glass-card main-about">
+                <div class="about-text">
+                    <h2>Minha Jornada</h2>
+                    <p>Estudante de ADS com foco em arquitetura de sistemas. Minha transição do e-commerce para o desenvolvimento me deu uma visão única sobre <strong>conversão e performance</strong>.</p>
                 </div>
-
-                <div class="tech-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS</span>
-                </div>
-
-                <div class="tech-item">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-
-                <div class="tech-item">
-                    <i class="fab fa-node"></i>
-                    <span>Node.js</span>
-                </div>
-
-                <div class="tech-item">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
+                <div class="tech-stack-mini">
+                    <div class="tech-pill"><i class="fab fa-react"></i> React</div>
+                    <div class="tech-pill"><i class="fab fa-node-js"></i> Node.js</div>
+                    <div class="tech-pill"><i class="fab fa-js"></i> TypeScript</div>
+                    <div class="tech-pill"><i class="fas fa-database"></i> SQL</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="projetos">
-        <h2>Projetos</h2>
-
-        <div class="projetos-grid">
-            <div class="card">
-                <img src="site-seu-closet.png" alt="Projeto Loja de Roupas">
-                <div class="card-conteudo">
-                    <h3>Loja Virtual de Roupas</h3>
-                    <p>
-                        E-commerce moderno com foco em performance,
-                        experiência do usuário e design responsivo.
-                    </p>
+    <section id="projetos" class="projetos-modern">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projetos Selecionados</h2>
+                <div class="line"></div>
+            </div>
+            
+            <div class="projetos-grid-v2">
+                <div class="projeto-card">
+                    <div class="projeto-img">
+                        <img src="site-seu-closet.png" alt="E-commerce">
+                        <div class="projeto-overlay">
+                            <a href="#" class="view-btn">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="projeto-info">
+                        <span class="proj-category">E-commerce / Full Stack</span>
+                        <h3>Seu Closet Digital</h3>
+                        <p>Integração de pagamentos e painel administrativo personalizado.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CONTATO -->
-    <section id="contatos" class="contato">
-        <h2>Vamos conversar?</h2>
-
-        <form id="formContato" class="formulario">
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
-            <button type="submit">
-                <i class="fab fa-whatsapp"></i> Enviar pelo WhatsApp
-            </button>
-        </form>
-    </section>
-
-    <!-- BOTÃO WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5512981815787" target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- SCRIPT WHATSAPP -->
-    <script>
-    document.getElementById("formContato").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        let nome = document.getElementById("nome").value;
-        let mensagem = document.getElementById("mensagem").value;
-
-        let texto = `Olá, me chamo ${nome}. ${mensagem}`;
-        let numero = "5512981815787";
-
-        let url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-        window.open(url, "_blank");
-    });
-    </script>
-
-</body>
-
-</html>
 
 
