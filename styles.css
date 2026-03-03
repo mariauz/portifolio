@@ -54,13 +54,30 @@ body {
 }
 
 .nav a {
+  position: relative;
   text-decoration: none;
   color: var(--muted);
-  transition: .3s;
+  transition: color 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: var(--primary);
+  transition: width 0.3s ease;
 }
 
 .nav a:hover {
   color: var(--text);
+}
+
+.nav a:hover::after {
+  width: 100%;
+};
 }
 
 .btn-nav {
@@ -134,13 +151,14 @@ body {
   color: white;
   font-size: .9rem;
   font-weight: 500;
-  text-decoration: none;
-  transition: transform 0.3s, background 0.3s;
+  text-decoration: none; /* remove sublinhado */
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .badge:hover {
   background: var(--primary-light);
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.05); /* animação suave */
+  box-shadow: 0 8px 25px rgba(37,99,235,0.4); /* glow sutil */
 }
 
 /* ================= NOME E SUBTÍTULO ================= */
@@ -402,3 +420,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
