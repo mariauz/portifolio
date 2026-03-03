@@ -95,8 +95,6 @@ body {
   max-width: 750px;
 }
 
-/* FOTO */
-
 .foto-wrapper {
   width: 210px;
   height: 210px;
@@ -130,8 +128,6 @@ body {
   z-index: 1;
 }
 
-/* BADGE */
-
 .badge {
   display: inline-block;
   padding: 6px 16px;
@@ -143,25 +139,29 @@ body {
   margin-bottom: 20px;
 }
 
-/* TITULO */
-
 .hero h1 {
   font-size: clamp(2.5rem,6vw,3.5rem);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .hero h1 span {
   color: var(--primary);
 }
 
-/* TEXTO */
+/* SUBTÍTULO */
+
+.subtitulo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--primary-light);
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
 
 .hero p {
   color: var(--muted);
   margin-bottom: 35px;
 }
-
-/* BOTÃO + SOCIAL */
 
 .hero-buttons {
   display: flex;
@@ -186,7 +186,7 @@ body {
 }
 
 .social a {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--primary-light);
   transition: .3s;
 }
@@ -246,6 +246,9 @@ body {
 
 .stack {
   text-align: center;
+  border: 1px solid var(--primary);
+  border-radius: 18px;
+  padding: 50px;
 }
 
 .stack h2 {
@@ -254,28 +257,25 @@ body {
 
 .stack-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
 }
 
 .stack-item {
-  padding: 20px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.03);
-  transition: .3s;
-  font-size: .9rem;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .stack-item i {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   color: var(--primary);
   margin-bottom: 10px;
   display: block;
+  transition: .3s;
 }
 
-.stack-item:hover {
-  background: rgba(37,99,235,0.1);
-  transform: translateY(-5px);
+.stack-item:hover i {
+  transform: scale(1.2);
 }
 
 /* ================= PROJETOS ================= */
@@ -288,12 +288,12 @@ body {
 }
 
 .projetos-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 }
 
 .projeto-card {
-  width: 500px;
   background: var(--surface);
   border-radius: 16px;
   overflow: hidden;
@@ -368,7 +368,6 @@ body {
   color: white;
   font-size: 1.8rem;
   text-decoration: none;
-  border: none;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   transition: .3s;
 }
@@ -385,11 +384,4 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .stack-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .projeto-card {
-    width: 100%;
-  }
 }
