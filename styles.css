@@ -361,6 +361,25 @@ body {
   font-size: .85rem;
 }
 
+
+.projeto-card h3 {
+  margin: 10px 0 15px;
+  font-size: 1.3rem;
+}
+
+.projeto-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.projeto-card span {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 /* ================= CONTATO ================= */
 .contato form {
   margin-top: 30px;
@@ -420,4 +439,5 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
 
