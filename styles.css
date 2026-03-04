@@ -440,4 +440,23 @@ body {
   }
 }
 
+/* ================= BOTÃO PROJETO ================= */
+.btn-projeto {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-projeto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(37,99,235,0.4);
+}
+
 
