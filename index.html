@@ -1,161 +1,523 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Maria Eduarda Martins, desenvolvedora full stack focada em sites modernos, responsivos e estratégicos para empresas e negócios digitais." />
-  <title>Maria Eduarda Martins | Desenvolvedora Full Stack</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Portfólio de desenvolvedora Full Stack — sites modernos, responsivos e estratégicos para empresas que querem vender melhor." />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>Maria Martins — Desenvolvedora Full Stack</title>
+
+  <!-- Fonts: Fontshare (Cabinet Grotesk + Satoshi) -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%233b82f6'/><text x='16' y='22' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='16' fill='white'>M</text></svg>" />
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="nav">
-    <div class="nav-container">
-      <a class="logo" href="#inicio" aria-label="Ir para o início">Maria<span>.</span>Dev</a>
-      <nav aria-label="Menu principal">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato" class="btn-nav">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Pular para o conteúdo</a>
 
-  <main id="conteudo">
-    <section id="inicio" class="hero">
-      <div class="hero-content">
-        <div class="foto-wrapper">
-          <img src="maria.png" class="foto-perfil" alt="Foto de Maria Eduarda Martins" />
-        </div>
+  <!-- ===== NAVBAR ===== -->
+  <header role="banner">
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <div class="nav-container">
 
-        <a href="https://wa.me/5512981815787" target="_blank" rel="noopener noreferrer" class="badge">
-          Solicitar Orçamento
+        <!-- Logo SVG -->
+        <a href="#" class="logo-link" aria-label="Maria Martins — Início">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#3b82f6"/>
+            <path class="logo-mark" d="M8 22L13 10L16 18L19 10L24 22" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="logo-text">Maria<span>.</span></span>
         </a>
 
-        <p class="eyebrow">Desenvolvedora Full Stack</p>
-        <h1>Maria Eduarda <span>Martins</span></h1>
-        <p class="hero-copy">
-          Crio sites modernos, responsivos e estratégicos para empresas que querem vender melhor e transmitir mais confiança no digital.
-        </p>
+        <!-- Menu desktop -->
+        <ul class="nav-menu" role="list">
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
 
-        <div class="hero-buttons">
-          <a href="#projetos" class="btn-primary">Conhecer Projetos</a>
+        <!-- CTA desktop -->
+        <a href="#contato" class="btn-nav" aria-label="Entrar em contato">
+          Vamos conversar
+        </a>
 
-          <div class="social" aria-label="Redes sociais">
-            <a href="https://github.com/mariauz" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mariamartins-dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
+        <!-- Hamburger mobile -->
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Menu de navegação" aria-modal="true">
+    <ul role="list">
+      <li><a href="#sobre" class="mobile-link">Sobre</a></li>
+      <li><a href="#projetos" class="mobile-link">Projetos</a></li>
+      <li><a href="#contato" class="mobile-link">Contato</a></li>
+    </ul>
+    <a href="#contato" class="btn btn-primary mobile-link">Vamos conversar</a>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-container">
+
+        <!-- Texto hero -->
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Disponível para projetos
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="sobre" class="section">
-      <div class="container">
-        <div class="card about-grid">
-          <article>
-            <h2>Sobre Mim</h2>
-            <p>
-              Sou desenvolvedora web focada em criar sites rápidos, bonitos e fáceis de usar. Trabalho com front-end e back-end para entregar soluções completas para empresas, marcas pessoais e negócios digitais.
-            </p>
-          </article>
+          <h1 class="hero-heading reveal reveal-delay-1" id="hero-heading">
+            Desenvolvedora<br/><em>Full Stack</em>
+          </h1>
 
-          <article>
-            <h2>Experiência com E-commerce</h2>
-            <p>
-              Minha experiência com e-commerce me deu visão de conversão, comportamento do usuário e estrutura de venda. Isso me ajuda a desenvolver sites pensados não só para o visual, mas também para gerar resultado.
-            </p>
-          </article>
-        </div>
-
-        <div class="card stack">
-          <h2>Minhas Tecnologias</h2>
-          <div class="stack-grid">
-            <div class="stack-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-            <div class="stack-item"><i class="fab fa-html5"></i><span>HTML</span></div>
-            <div class="stack-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-            <div class="stack-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-            <div class="stack-item"><i class="fab fa-react"></i><span>React</span></div>
-            <div class="stack-item"><i class="fas fa-database"></i><span>SQL</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="section">
-      <div class="container">
-        <h2 class="section-title">Projetos Selecionados</h2>
-
-        <div class="projetos-grid">
-          <article class="projeto-card">
-            <img src="site-seu-closet.png" alt="Projeto Seu Closet E-commerce" loading="lazy" />
-            <div class="projeto-info">
-              <span>Consultora de E-commerce</span>
-              <h3>Seu Closet E-commerce</h3>
-              <p>
-                Loja virtual com integração de pagamentos e painel administrativo. Estruturei o layout e melhorei a experiência do usuário, com foco em navegação e conversão.
-              </p>
-              <a href="https://www.seuclosetbyjunascimento.com.br/" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                Conhecer Projeto
-              </a>
-            </div>
-          </article>
-
-          <article class="projeto-card">
-            <img src="cod-python.jpeg" alt="Projeto de automação em Python" loading="lazy" />
-            <div class="projeto-info">
-              <span>Automação de Processos</span>
-              <h3>Automação de Compras e Estoque</h3>
-              <p>
-                Sistema em Python para automatizar análise de estoque no Tiny ERP, identificar produtos com saldo baixo e gerar planilhas para compras.
-              </p>
-              <a href="https://github.com/mariauz/automacao-estoque-erp-tiny" target="_blank" rel="noopener noreferrer" class="btn-projeto">
-                Ver Código no GitHub
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="section">
-      <div class="container">
-        <div class="card contato">
-          <h2>Entre em Contato</h2>
-          <p class="contact-text">
-            Se você quer um site com visual profissional, responsivo e pronto para vender, me chama.
+          <p class="hero-sub reveal reveal-delay-2">
+            Crio sites modernos, responsivos e estratégicos para empresas que querem <strong>vender melhor</strong> e transmitir mais confiança no digital.
           </p>
 
-          <form id="contact-form">
-            <label class="sr-only" for="nome">Seu nome</label>
-            <input type="text" id="nome" placeholder="Seu nome" required>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a href="#projetos" class="btn btn-primary">
+              Ver projetos
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 10h12M10 4l6 6-6 6"/>
+              </svg>
+            </a>
+            <a href="#contato" class="btn btn-outline">
+              Entre em contato
+            </a>
+          </div>
+        </div>
 
-            <label class="sr-only" for="mensagem">Sua mensagem</label>
-            <textarea id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+        <!-- Avatar + stats -->
+        <div class="hero-avatar-wrap reveal reveal-delay-2">
+          
+          <div class="hero-avatar">
+            <img
+              src="./maria.png"
+              alt="Maria Martins — Desenvolvedora Full Stack"
+              width="240"
+              height="240"
+              loading="eager"
+            />
+          </div>
+          <div class="hero-stats" role="list" aria-label="Estatísticas">
+            <div class="stat" role="listitem">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Anos exp.</span>
+            </div>
+            <div class="stat" role="listitem">
+              <span class="stat-num">20+</span>
+              <span class="stat-label">Projetos</span>
+            </div>
+            <div class="stat" role="listitem">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Dedicação</span>
+            </div>
+          </div>
+        </div>
 
-            <button type="submit" class="btn-primary">Enviar Mensagem</button>
-          </form>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" aria-labelledby="sobre-heading">
+      <div class="section-container">
+
+        <div class="reveal">
+          <span class="section-label" aria-hidden="true">Sobre mim</span>
+          <h2 class="section-title" id="sobre-heading">Front-end, Back-end<br/>e visão de negócio</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-text reveal reveal-delay-1">
+            <p>Sou desenvolvedora web focada em criar sites <strong>rápidos, bonitos e fáceis de usar</strong>. Trabalho com front-end e back-end para entregar soluções completas para empresas, marcas pessoais e negócios digitais.</p>
+            <p>Minha experiência com e-commerce me deu visão de conversão, comportamento do usuário e estrutura de venda. Isso me ajuda a desenvolver sites pensados não só para o visual, mas também para <strong>gerar resultado</strong>.</p>
+
+            <blockquote class="about-highlight">
+              "Desenvolvo sites com estratégia — cada escolha de layout, cor e texto tem um objetivo claro: converter visitante em cliente."
+            </blockquote>
+
+            <div class="mt-8">
+              <a href="#contato" class="btn btn-primary">
+                Trabalhe comigo
+                <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 10h12M10 4l6 6-6 6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="skills-block reveal reveal-delay-2">
+            <p class="skills-title">Stack &amp; Ferramentas</p>
+            <div class="skills-grid" role="list" aria-label="Habilidades técnicas">
+              <span class="skill-tag" role="listitem">HTML5</span>
+              <span class="skill-tag" role="listitem">CSS3</span>
+              <span class="skill-tag" role="listitem">JavaScript</span>
+              <span class="skill-tag" role="listitem">Python</span>
+              <span class="skill-tag" role="listitem">Django</span>
+              <span class="skill-tag" role="listitem">React</span>
+              <span class="skill-tag" role="listitem">Node.js</span>
+              <span class="skill-tag" role="listitem">PostgreSQL</span>
+              <span class="skill-tag" role="listitem">Git / GitHub</span>
+              <span class="skill-tag" role="listitem">Figma</span>
+              <span class="skill-tag" role="listitem">WordPress</span>
+              <span class="skill-tag" role="listitem">WooCommerce</span>
+              <span class="skill-tag" role="listitem">SEO</span>
+              <span class="skill-tag" role="listitem">UX / UI</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" aria-labelledby="projetos-heading">
+      <div class="section-container">
+
+        <div class="reveal">
+          <span class="section-label" aria-hidden="true">Portfólio</span>
+          <h2 class="section-title" id="projetos-heading">Projetos em destaque</h2>
+          <p class="section-desc">Soluções reais entregues para clientes e projetos próprios — cada um com foco em performance e resultado.</p>
+        </div>
+
+        <div class="projects-grid" role="list">
+
+          <!-- Projeto 1 -->
+          <article class="project-card reveal reveal-delay-1" role="listitem">
+            <div class="project-thumb">
+              <img
+                src="./site-seu-closet.png"
+                alt="Captura de tela da loja virtual Seu Closet"
+                width="600"
+                height="338"
+                loading="lazy"
+              />
+              <span class="project-thumb-tag">E-commerce</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Loja Virtual com Integração de Pagamentos</h3>
+              <p class="project-desc">
+                Loja virtual com integração de pagamentos e painel administrativo. Estruturei o layout e melhorei a experiência do usuário, com foco em navegação e conversão.
+              </p>
+              <div class="project-footer">
+                <div class="project-tags" aria-label="Tecnologias usadas">
+                  <span class="project-tag">WooCommerce</span>
+                  <span class="project-tag">WordPress</span>
+                  <span class="project-tag">PHP</span>
+                </div>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Conhecer o projeto Loja Virtual">
+                  Conhecer
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 8h10M8 3l5 5-5 5"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="project-card reveal reveal-delay-2" role="listitem">
+            <div class="project-thumb">
+              <img
+                src="./cod-python.jpeg"
+                alt="Código Python para automação de estoque no Tiny ERP"
+                width="600"
+                height="338"
+                loading="lazy"
+              />
+              <span class="project-thumb-tag">Automação</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Análise de Estoque — Tiny ERP</h3>
+              <p class="project-desc">
+                Sistema em Python para automatizar análise de estoque no Tiny ERP, identificar produtos com saldo baixo e gerar planilhas para compras de forma eficiente.
+              </p>
+              <div class="project-footer">
+                <div class="project-tags" aria-label="Tecnologias usadas">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Pandas</span>
+                  <span class="project-tag">API</span>
+                </div>
+                <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Ver código do projeto no GitHub">
+                  GitHub
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 8h10M8 3l5 5-5 5"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" aria-labelledby="contato-heading">
+      <div class="section-container">
+
+        <div class="reveal">
+          <span class="section-label" aria-hidden="true">Contato</span>
+          <h2 class="section-title" id="contato-heading">Vamos trabalhar juntos?</h2>
+        </div>
+
+        <div class="contact-inner">
+
+          <!-- Info -->
+          <div class="contact-info reveal reveal-delay-1">
+            <p>Se você quer um site com visual profissional, responsivo e pronto para vender — me chama. Estou disponível para projetos freela e parcerias de longo prazo.</p>
+
+            <nav class="contact-links" aria-label="Canais de contato">
+              <a href="mailto:contato@mariamartins.dev" class="contact-link-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="M2 8l10 6 10-6"/>
+                </svg>
+                contato@mariamartins.dev
+              </a>
+              <a href="https://linkedin.com" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="4"/>
+                  <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                </svg>
+                GitHub
+              </a>
+            </nav>
+          </div>
+
+          <!-- Formulário -->
+          <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate aria-label="Formulário de contato">
+            <div class="form-group">
+              <label for="name" class="form-label">Nome</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Mensagem</label>
+              <textarea id="message" name="message" class="form-input" placeholder="Conte sobre seu projeto..." required rows="5"></textarea>
+            </div>
+            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+              Enviar mensagem
+              <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 10h12M10 4l6 6-6 6"/>
+              </svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <a href="https://wa.me/5512981815787" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Falar no WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> Maria Martins. Feito com dedicação.
+      </p>
+      <nav class="footer-socials" aria-label="Redes sociais">
+        <a href="https://github.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="4"/>
+            <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </footer>
 
-  <script src="script.js"></script>
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+  (() => {
+    'use strict';
+
+    /* ---- ANO NO FOOTER ---- */
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    /* ---- NAVBAR: scroll class + active link ---- */
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('main section[id]');
+
+    const onScroll = () => {
+      // Scrolled class
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+
+      // Active link highlight
+      let currentId = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) currentId = sec.id;
+      });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${currentId}`);
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ---- MENU MOBILE ---- */
+    const toggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('nav-mobile');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    let menuOpen = false;
+
+    const openMenu = () => {
+      menuOpen = true;
+      mobileNav.style.display = 'flex';
+      requestAnimationFrame(() => mobileNav.classList.add('open'));
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      mobileNav.querySelector('a')?.focus();
+    };
+
+    const closeMenu = () => {
+      menuOpen = false;
+      mobileNav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      // Hide after transition
+      mobileNav.addEventListener('transitionend', () => {
+        if (!menuOpen) mobileNav.style.display = '';
+      }, { once: true });
+    };
+
+    toggle.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // Close on ESC
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menuOpen) closeMenu();
+    });
+
+    // Trap focus inside mobile menu
+    mobileNav.addEventListener('keydown', e => {
+      if (e.key !== 'Tab') return;
+      const focusables = [...mobileNav.querySelectorAll('a, button')].filter(el => !el.disabled);
+      const first = focusables[0], last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+
+    /* ---- SCROLL REVEAL com IntersectionObserver ---- */
+    const revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      revealEls.forEach(el => observer.observe(el));
+    }
+
+    /* ---- SMOOTH SCROLL para links âncora ---- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    /* ---- FORMULÁRIO ---- */
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        const originalText = btn.innerHTML;
+
+        // Validação simples
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if (!name || !email || !message) {
+          showStatus('error', 'Por favor, preencha todos os campos.');
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          showStatus('error', 'Por favor, insira um e-mail válido.');
+          return;
+        }
+
+        // Feedback de loading
+        btn.disabled = true;
+        btn.innerHTML = 'Enviando…';
+
+        // Simulação de envio (substitua por fetch real)
+        await new Promise(r => setTimeout(r, 1200));
+
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        showStatus('success', 'Mensagem enviada! Retorno em até 24h. 🎉');
+        form.reset();
+      });
+    }
+
+    function showStatus(type, text) {
+      status.className = `form-status ${type}`;
+      status.textContent = text;
+      status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(() => { status.className = 'form-status'; status.textContent = ''; }, 6000);
+    }
+
+    /* ---- HOVER 3D SUAVE nos cards de projeto ---- */
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `translateY(-4px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+  })();
+  </script>
+
 </body>
 </html>
-
-
