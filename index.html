@@ -1144,26 +1144,91 @@ textarea.form-input { resize: vertical; min-height: 120px; }
       </div>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" aria-labelledby="projetos-heading">
-      <div class="section-container">
+<!-- CONTATO -->
+<section id="contato" aria-labelledby="contato-heading">
+  <div class="section-container">
 
-        <div class="reveal">
-          <span class="section-label" aria-hidden="true">Portfólio</span>
-          <h2 class="section-title" id="projetos-heading">Projetos em destaque</h2>
-          <p class="section-desc">Soluções reais desenvolvidas para clientes e projetos próprios, sempre com foco em performance e resultados.</p>
+    <div class="reveal">
+      <span class="section-label" aria-hidden="true">Contato</span>
+      <h2 class="section-title" id="contato-heading">Vamos trabalhar juntos?</h2>
+    </div>
+
+    <div class="contact-inner">
+
+      <!-- Info -->
+      <div class="contact-info reveal reveal-delay-1">
+        <p>
+          Se você busca um site com visual profissional, responsivo e pensado para gerar resultados, fale comigo.
+          Estou disponível para projetos freelancer e parcerias de longo prazo.
+        </p>
+
+        <nav class="contact-links" aria-label="Canais de contato">
+          <a href="mailto:mariamartins.ial@gmail.com" class="contact-link-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 8l10 6 10-6"/>
+            </svg>
+            mariamartins.ial@gmail.com
+          </a>
+
+          <a href="https://www.linkedin.com/in/mariamartins-dev/" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="4"/>
+              <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <a href="https://github.com/mariauz" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+            GitHub
+          </a>
+        </nav>
+      </div>
+
+      <!-- Formulário -->
+      <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate aria-label="Formulário de contato">
+        <div class="form-group">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required autocomplete="name" />
         </div>
 
-        <div class="projects-grid" role="list">
+        <div class="form-group">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required autocomplete="email" />
+        </div>
 
-          <!-- PROJETOS -->
+        <div class="form-group">
+          <label for="message" class="form-label">Mensagem</label>
+          <textarea id="message" name="message" class="form-input" placeholder="Conte sobre seu projeto..." required rows="5"></textarea>
+        </div>
+
+        <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
+
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+          Enviar mensagem
+          <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 10h12M10 4l6 6-6 6"/>
+          </svg>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
 <section id="projetos" aria-labelledby="projetos-heading">
   <div class="section-container">
 
     <div class="reveal">
       <span class="section-label" aria-hidden="true">Portfólio</span>
       <h2 class="section-title" id="projetos-heading">Projetos em destaque</h2>
-      <p class="section-desc">Soluções reais desenvolvidas para clientes e projetos próprios, sempre com foco em performance e resultados.</p>
+      <p class="section-desc">
+        Soluções reais desenvolvidas para clientes e projetos próprios, sempre com foco em performance e resultados.
+      </p>
     </div>
 
     <div class="projects-grid" role="list">
@@ -1204,111 +1269,45 @@ textarea.form-input { resize: vertical; min-height: 120px; }
         </div>
       </article>
 
-         <!-- Projeto 2 -->
-<article class="project-card reveal reveal-delay-2" role="listitem">
-  <div class="project-thumb">
-    <img
-      src="./cod-python.jpeg"
-      alt="Código Python para automação de estoque no Tiny ERP"
-      width="600"
-      height="338"
-      loading="lazy"
-    />
-    <span class="project-thumb-tag">Automação</span>
-  </div>
+      <!-- Projeto 2 -->
+      <article class="project-card reveal reveal-delay-2" role="listitem">
+        <div class="project-thumb">
+          <img
+            src="./cod-python.jpeg"
+            alt="Código Python para automação de estoque no Tiny ERP"
+            width="600"
+            height="338"
+            loading="lazy"
+          />
+          <span class="project-thumb-tag">Automação</span>
+        </div>
 
-  <div class="project-body">
-    <h3 class="project-title">Análise de Estoque — Tiny ERP</h3>
-    <p class="project-desc">
-      Sistema em Python para automatizar análise de estoque no Tiny ERP, identificar produtos com saldo baixo e gerar planilhas para compras de forma eficiente.
-    </p>
+        <div class="project-body">
+          <h3 class="project-title">Análise de Estoque — Tiny ERP</h3>
+          <p class="project-desc">
+            Sistema em Python para automatizar análise de estoque no Tiny ERP, identificar produtos com saldo baixo e gerar planilhas para compras de forma eficiente.
+          </p>
 
-    <div class="project-footer">
-      <a
-        href="https://github.com/mariauz/automacao-estoque-erp-tiny"
-        class="project-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Ver código do projeto no GitHub"
-      >
-        GitHub
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path d="M3 8h10M8 3l5 5-5 5"/>
-        </svg>
-      </a>
+          <div class="project-footer">
+            <a
+              href="https://github.com/mariauz/automacao-estoque-erp-tiny"
+              class="project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver código do projeto no GitHub"
+            >
+              GitHub
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M3 8h10M8 3l5 5-5 5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
-</article>
-
-</div>
-</div>
 </section>
-
-    <!-- CONTATO -->
-    <section id="contato" aria-labelledby="contato-heading">
-      <div class="section-container">
-
-        <div class="reveal">
-          <span class="section-label" aria-hidden="true">Contato</span>
-          <h2 class="section-title" id="contato-heading">Vamos trabalhar juntos?</h2>
-        </div>
-
-        <div class="contact-inner">
-
-          <!-- Info -->
-          <div class="contact-info reveal reveal-delay-1">
-            <p>Se você busca um site com visual profissional, responsivo e pensado para gerar resultados, fale comigo. Estou disponível para projetos freelancer e parcerias de longo prazo.</p>
-
-            <nav class="contact-links" aria-label="Canais de contato">
-              <a href="mailto:contato@mariamartins.dev" class="contact-link-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="M2 8l10 6 10-6"/>
-                </svg>
-                mariamartins.ial@gmail.com
-              </a>
-              <a href="ttps://www.linkedin.com/in/mariamartins-dev/" class="contact-link-item" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="2" y="2" width="20" height="20" rx="4"/>
-                  <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/>
-                </svg>
-                LinkedIn
-              </a>
-              <a href="https://github.com/mariauz" class="contact-link-item" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
-                </svg>
-                GitHub
-              </a>
-            </nav>
-          </div>
-
-          <!-- Formulário -->
-          <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate aria-label="Formulário de contato">
-            <div class="form-group">
-              <label for="name" class="form-label">Nome</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome" required autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required autocomplete="email" />
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Mensagem</label>
-              <textarea id="message" name="message" class="form-input" placeholder="Conte sobre seu projeto..." required rows="5"></textarea>
-            </div>
-            <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
-            <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
-              Enviar mensagem
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M4 10h12M10 4l6 6-6 6"/>
-              </svg>
-            </button>
-          </form>
-
-        </div>
-      </div>
-    </section>
 
   </main>
 
