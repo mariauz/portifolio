@@ -1156,65 +1156,93 @@ textarea.form-input { resize: vertical; min-height: 120px; }
 
         <div class="projects-grid" role="list">
 
-          <!-- Projeto 1 -->
-          <article class="project-card reveal reveal-delay-1" role="listitem">
-            <div class="project-thumb">
-              <img
-                src="./site-seu-closet.png"
-                alt="Captura de tela da loja virtual Seu Closet"
-                width="600"
-                height="338"
-                loading="lazy"
-              />
-              <span class="project-thumb-tag">E-commerce</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Loja Virtual com Integração de Pagamentos</h3>
-              <p class="project-desc">
-                Loja virtual com integração de pagamentos e painel administrativo. Estruturei o layout e melhorei a experiência do usuário, com foco em navegação e conversão.
-              </p>
-              <div class="project-footer">
-                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Conhecer o projeto Loja Virtual">
-                  Conhecer
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M3 8h10M8 3l5 5-5 5"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
+          <!-- PROJETOS -->
+<section id="projetos" aria-labelledby="projetos-heading">
+  <div class="section-container">
 
-          <!-- Projeto 2 -->
-          <article class="project-card reveal reveal-delay-2" role="listitem">
-            <div class="project-thumb">
-              <img
-                src="./cod-python.jpeg"
-                alt="Código Python para automação de estoque no Tiny ERP"
-                width="600"
-                height="338"
-                loading="lazy"
-              />
-              <span class="project-thumb-tag">Automação</span>
-            </div>
-            <div class="project-body">
-              <h3 class="project-title">Análise de Estoque — Tiny ERP</h3>
-              <p class="project-desc">
-                Sistema em Python para automatizar análise de estoque no Tiny ERP, identificar produtos com saldo baixo e gerar planilhas para compras de forma eficiente.
-              </p>
-              <div class="project-footer">
-                <a href="https://github.com" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Ver código do projeto no GitHub">
-                  GitHub
-                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M3 8h10M8 3l5 5-5 5"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
+    <div class="reveal">
+      <span class="section-label" aria-hidden="true">Portfólio</span>
+      <h2 class="section-title" id="projetos-heading">Projetos em destaque</h2>
+      <p class="section-desc">Soluções reais desenvolvidas para clientes e projetos próprios, sempre com foco em performance e resultados.</p>
+    </div>
 
+    <div class="projects-grid" role="list">
+
+      <!-- Projeto 1 -->
+      <article class="project-card reveal reveal-delay-1" role="listitem">
+        <div class="project-thumb">
+          <img
+            src="./site-seu-closet.png"
+            alt="Captura de tela da loja virtual Seu Closet"
+            width="600"
+            height="338"
+            loading="lazy"
+          />
+          <span class="project-thumb-tag">E-commerce</span>
         </div>
-      </div>
-    </section>
+
+        <div class="project-body">
+          <h3 class="project-title">Loja Virtual com Integração de Pagamentos</h3>
+          <p class="project-desc">
+            Loja virtual com integração de pagamentos e painel administrativo. Estruturei o layout e melhorei a experiência do usuário, com foco em navegação e conversão.
+          </p>
+
+          <div class="project-footer">
+            <a
+              href="https://www.seuclosetbyjunascimento.com.br/"
+              class="project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Conhecer o projeto Loja Virtual"
+            >
+              Conhecer
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M3 8h10M8 3l5 5-5 5"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+         <!-- Projeto 2 -->
+<article class="project-card reveal reveal-delay-2" role="listitem">
+  <div class="project-thumb">
+    <img
+      src="./cod-python.jpeg"
+      alt="Código Python para automação de estoque no Tiny ERP"
+      width="600"
+      height="338"
+      loading="lazy"
+    />
+    <span class="project-thumb-tag">Automação</span>
+  </div>
+
+  <div class="project-body">
+    <h3 class="project-title">Análise de Estoque — Tiny ERP</h3>
+    <p class="project-desc">
+      Sistema em Python para automatizar análise de estoque no Tiny ERP, identificar produtos com saldo baixo e gerar planilhas para compras de forma eficiente.
+    </p>
+
+    <div class="project-footer">
+      <a
+        href="https://github.com/mariauz/automacao-estoque-erp-tiny"
+        class="project-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver código do projeto no GitHub"
+      >
+        GitHub
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 8h10M8 3l5 5-5 5"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>
+
+</div>
+</div>
+</section>
 
     <!-- CONTATO -->
     <section id="contato" aria-labelledby="contato-heading">
@@ -1237,9 +1265,9 @@ textarea.form-input { resize: vertical; min-height: 120px; }
                   <rect x="2" y="4" width="20" height="16" rx="2"/>
                   <path d="M2 8l10 6 10-6"/>
                 </svg>
-                contato@mariamartins.dev
+                mariamartins.ial@gmail.com
               </a>
-              <a href="https://linkedin.com" class="contact-link-item" target="_blank" rel="noopener noreferrer">
+              <a href="ttps://www.linkedin.com/in/mariamartins-dev/" class="contact-link-item" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="4"/>
                   <path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/>
